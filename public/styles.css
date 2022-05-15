@@ -1,0 +1,79 @@
+
+.root{
+    background-color: #FB6B6B;
+    width: 100%;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.corpoMenu{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 136px;
+    height: 161px;
+    /* margin-top: 148px; */
+}
+
+.tituloMenu{
+    font-size: 36px;
+    font-family: 'Righteous';
+    letter-spacing: -0.012em;
+    color: #ffffff;
+    padding: 30px;
+}
+
+.iniciar{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 246px;
+    height: 54px;
+    border: 1px solid #D70900;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Recursive';
+    color:#D70900;
+    cursor: pointer;
+}
+
+.corpoPerguntas{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoTopo{
+    width: 52px;
+    height: 60px;    
+}
+
+.tituloTopo{
+    font-family: 'Righteous';    
+    font-size: 36px;    
+    letter-spacing: -0.012em;
+    color: #FFFFFF;
+}
+
+.escondido{
+    display:none;
+}
