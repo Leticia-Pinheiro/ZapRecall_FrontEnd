@@ -5,21 +5,25 @@ export default function Cards(){
         <div className = "cards">
             <Flashcard 
             indice = "1"
+            indiceQ = "1"
             questao = "Quanto é 2+2?"
             resposta = "4" />
 
             <Flashcard 
             indice = "2"
+            indiceQ = "2"
             questao = "Quanto é 3+3?"
             resposta = "6" />
 
             <Flashcard 
             indice = "3"
+            indiceQ = "3"
             questao = "Quanto é 4+4?"
             resposta = "8" />
 
             <Flashcard 
             indice = "4"
+            indiceQ = "4"
             questao = "Quanto é 5+5?"
             resposta = "10" />
 

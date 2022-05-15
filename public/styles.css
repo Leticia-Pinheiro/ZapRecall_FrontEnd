@@ -115,7 +115,12 @@
     background: #FFFFFF;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;    
-    margin: 25px;       
+    margin: 25px;   
+    
+    
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
 
 }
 
@@ -126,6 +131,14 @@
     color: #333333;
 }
 
-.resposta{
-    
+/* .backface{
+    transform: rotateY(180deg);    
 }
+
+.virada .backface {
+    transform: rotateY(0deg);
+  }
+  
+  .virada .frontface {
+    transform: rotateY(-180deg);
+  } */

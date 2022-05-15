@@ -8,8 +8,15 @@ export default function Flashcard(props){
 
         let questaoSel = perguntaSel.querySelector(".card")
         questaoSel.classList.remove("escondido")
+    }
 
+    function Virar(i){
+        let questaoVirar = document.getElementById(i)
+        let questao = questaoVirar.querySelector(".questao")
+        questao.classList.add("escondido")
 
+        let resposta = questaoVirar.querySelector(".resposta")
+        resposta.classList.remove("escondido")
     }
 
 
@@ -20,11 +27,11 @@ export default function Flashcard(props){
                 <ion-icon name="play-outline"></ion-icon>
             </div>
 
-            <div className = "card escondido">
-                <div className = "questao front-face">
+            <div className = "card escondido" id = {props.indiceQ}>
+                <div className = "questao " onClick = {() => Virar(props.indiceQ)}>
                     <h1>{props.questao}</h1>
                 </div>
-                <div className = "resposta back-face">
+                <div className = "resposta  escondido">
                     <h1>{props.resposta}</h1>
                 </div>
             </div>
