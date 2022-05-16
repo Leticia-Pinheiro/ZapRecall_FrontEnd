@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2? family= Justo & display=swap');
 .root{
     background-color: #FB6B6B;
     width: 100%;
@@ -26,7 +26,8 @@
 
 .tituloMenu{
     font-size: 36px;
-    font-family: 'Righteous';
+    /* font-family: 'Righteous'; */
+    font-family: 'Justo', cursiva;
     letter-spacing: -0.012em;
     color: #ffffff;
     padding: 30px;
@@ -75,7 +76,7 @@
 }
 
 .escondido{
-    display:none;
+    display: none;
 }
 
 .cards{
@@ -131,14 +132,48 @@
     color: #333333;
 }
 
-/* .backface{
-    transform: rotateY(180deg);    
+.resposta{
+    /* display:flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.virada .backface {
-    transform: rotateY(0deg);
-  }
-  
-  .virada .frontface {
-    transform: rotateY(-180deg);
-  } */
+.botoes{
+    display:flex;
+}
+
+.botao{
+    width: 85px;
+    height: 37px;
+    border-radius: 5px;
+
+    font-size: 12px;
+    color: #FFFFFF;
+}
+
+.vermelho{
+    background-color: #FF3030;
+}
+
+.laranja{
+    background-color: #FF922E;
+}
+
+.verde{
+    background-color: #2FBE34;
+}
+
+.rodape{
+    width: 100%;
+    height: 70px;
+    background-color: #FFFFFF;    
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
+    /* position:fixed;
+    bottom: 0; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

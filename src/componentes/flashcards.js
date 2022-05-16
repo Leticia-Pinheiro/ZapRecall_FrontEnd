@@ -1,5 +1,15 @@
+import React from "react"
+import Rodape from "./rodape"
 
-export default function Flashcard(props){    
+
+export default function Flashcard(props){   
+    
+    
+
+
+    
+    
+
     function MostrarPergunta(i){
         let perguntaSel = document.getElementById(i)
 
@@ -19,8 +29,11 @@ export default function Flashcard(props){
         resposta.classList.remove("escondido")
     }
 
+    
 
-    return (
+
+    return (  
+        <>     
         <div className = "cards" id = {props.indice}>            
             <div className = "indice" onClick = {() => MostrarPergunta(props.indice)}>
                 <span>Pergunta {props.indice}</span>
@@ -33,9 +46,22 @@ export default function Flashcard(props){
                 </div>
                 <div className = "resposta  escondido">
                     <h1>{props.resposta}</h1>
+                    <div className = "botoes">
+                        <div className = "botao vermelho" onClick={props.aumentarErro}>Não lembrei</div>
+                        <div className = "botao laranja" onClick={props.aumentarQuase}>Quase não lembrei</div>
+                        <div className = "botao verde" onClick={props.aumentarAcerto}>Zap!</div>                        
+                    </div>                    
                 </div>
-            </div>
+            </div>        
             
         </div>
+        
+        </> 
     )
+    
+    
+    
+
+    
+    
 }
