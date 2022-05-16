@@ -1,14 +1,10 @@
 import React from "react"
-import Rodape from "./rodape"
 
 
 export default function Flashcard(props){   
     
     
-
-
-    
-    
+    // LOGICA
 
     function MostrarPergunta(i){
         let perguntaSel = document.getElementById(i)
@@ -22,19 +18,20 @@ export default function Flashcard(props){
 
     function Virar(i){
         let questaoVirar = document.getElementById(i)
+
         let questao = questaoVirar.querySelector(".questao")
         questao.classList.add("escondido")
 
         let resposta = questaoVirar.querySelector(".resposta")
         resposta.classList.remove("escondido")
-    }
-   
+    } 
 
-    
 
+
+    // RETORNAR
 
     return (  
-        <>     
+                   
         <div className = "cards" id = {props.indice} onClick = {() => MostrarPergunta(props.indice)}>            
             <div className = "indice" >
                 <span>Pergunta {props.indice}</span>
@@ -45,6 +42,7 @@ export default function Flashcard(props){
                 <div className = "questao " >
                     <h1>{props.questao}</h1>
                 </div>
+                
                 <div className = "resposta  escondido">
                     <h1>{props.resposta}</h1>
                     <div className = "botoes">
@@ -55,14 +53,7 @@ export default function Flashcard(props){
                 </div>
             </div>        
             
-        </div>
-        
-        </> 
+        </div>      
     )
-    
-    
-    
-
-    
     
 }

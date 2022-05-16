@@ -1,10 +1,12 @@
 import React from "react"
+import ReactDOM from "react-dom";
 import Flashcard from "./flashcards"
 import Rodape from "./rodape"
-import ReactDOM from "react-dom";
 
 
 export default function Cards(){
+
+    // LOGICA
 
     const [erro, setErro] = React.useState(0)
     const [quase, setQuase] = React.useState(0)
@@ -13,13 +15,13 @@ export default function Cards(){
 
     function AumentarErro(){
         setErro(erro+1)            
-        Verificacao()
+        Verificacao() 
+            
     }
 
     function AumentarQuase(){
         setQuase(quase+1)        
-        Verificacao()
-        
+        Verificacao()        
     }
 
     function AumentarAcerto(){
@@ -35,6 +37,8 @@ export default function Cards(){
         }
     }
 
+    
+
     function Aviso(){         
         return(
             <div className = "mensagem">
@@ -45,21 +49,21 @@ export default function Cards(){
                     {(erro === 0)?"Você não esqueceu de nenhum flashcard!":"Ainda faltam alguns... Mas não desanime!"}
                 </p>
             </div>
-        )   
-               
+        )                 
     }
 
     function Renderizar(){
         ReactDOM.render(<Aviso/>, document.querySelector(".espacoMsg"));
     }
-    
+
+
+    // RETORNO   
 
     return (
         <div className = "cards">
             <Flashcard 
             indice = "1"
-            indiceQ = "1"
-            
+            indiceQ = "1"            
             questao = "Quanto é 2+2?"
             resposta = "4" 
             aumentarErro = {AumentarErro}
@@ -69,8 +73,7 @@ export default function Cards(){
 
             <Flashcard 
             indice = "2"
-            indiceQ = "2"
-            
+            indiceQ = "2"            
             questao = "Quanto é 3+3?"
             resposta = "6" 
             aumentarErro = {AumentarErro}
@@ -80,8 +83,7 @@ export default function Cards(){
 
             <Flashcard 
             indice = "3"
-            indiceQ = "3"
-            
+            indiceQ = "3"            
             questao = "Quanto é 4+4?"
             resposta = "8" 
             aumentarErro = {AumentarErro}
@@ -91,8 +93,7 @@ export default function Cards(){
 
             <Flashcard 
             indice = "4"
-            indiceQ = "4"
-            
+            indiceQ = "4"            
             questao = "Quanto é 5+5?"
             resposta = "10" 
             aumentarErro = {AumentarErro}
@@ -112,3 +113,4 @@ export default function Cards(){
         </div>
     )
 }
+
