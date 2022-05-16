@@ -28,26 +28,27 @@ export default function Flashcard(props){
         let resposta = questaoVirar.querySelector(".resposta")
         resposta.classList.remove("escondido")
     }
+   
 
     
 
 
     return (  
         <>     
-        <div className = "cards" id = {props.indice}>            
-            <div className = "indice" onClick = {() => MostrarPergunta(props.indice)}>
+        <div className = "cards" id = {props.indice} onClick = {() => MostrarPergunta(props.indice)}>            
+            <div className = "indice" >
                 <span>Pergunta {props.indice}</span>
                 <ion-icon name="play-outline"></ion-icon>
             </div>
 
-            <div className = "card escondido" id = {props.indiceQ}>
-                <div className = "questao " onClick = {() => Virar(props.indiceQ)}>
+            <div className = "card escondido" id = {props.indiceQ} onClick = {() => Virar(props.indiceQ)}>
+                <div className = "questao " >
                     <h1>{props.questao}</h1>
                 </div>
                 <div className = "resposta  escondido">
                     <h1>{props.resposta}</h1>
                     <div className = "botoes">
-                        <div className = "botao vermelho" onClick={props.aumentarErro}>Não lembrei</div>
+                        <div className = "botao vermelho"  onClick={props.aumentarErro}>Não lembrei</div>
                         <div className = "botao laranja" onClick={props.aumentarQuase}>Quase não lembrei</div>
                         <div className = "botao verde" onClick={props.aumentarAcerto}>Zap!</div>                        
                     </div>                    
